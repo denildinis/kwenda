@@ -1,0 +1,73 @@
+# ============================
+# Sistema Operacional
+# ============================
+# Windows
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux
+*~
+
+# ============================
+# IDE / Editor
+# ============================
+# VS Code
+.vscode/
+*.code-workspace
+
+# PHPStorm / JetBrains
+.idea/
+*.iml
+
+# ============================
+# Node / JS
+# ============================
+node_modules/
+npm-debug.log
+yarn-error.log
+yarn-debug.log
+package-lock.json
+yarn.lock
+
+# ============================
+# PHP / Composer
+# ============================
+vendor/
+composer.lock
+
+# ============================
+# Build / Dist
+# ============================
+dist/
+build/
+*.min.js
+*.min.css
+
+# ============================
+# Logs / Cache
+# ============================
+*.log
+*.cache
+tmp/
+cache/
+sessions/
+
+# ============================
+# Arquivos Sensíveis
+# ============================
+.env
+.env.local
+.env.*.local
+config.php
+
+# ============================
+# Banco de Dados
+# ============================
+*.sql
+*.sqlite
