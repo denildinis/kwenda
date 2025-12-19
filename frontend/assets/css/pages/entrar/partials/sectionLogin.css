@@ -1,0 +1,129 @@
+section.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 80px 30px;
+  background: linear-gradient(to top right, var(--green) 0%, var(--blue-dark) 45%, var(--blue-dark) 100%);
+}
+
+section.form-container .logo {
+  width: 100%;
+  max-width: 150px;
+}
+
+section.form-container h1 {
+  margin: 20px 0;
+  font-size: var(--f2);
+  font-weight: var(--light);
+  color: var(--white);
+  line-height: 1.5;
+}
+
+section.form-container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+section.form-container form .field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 25px;
+}
+
+section.form-container form .field label {
+  font-size: var(--f1);
+  font-weight: var(--bold);
+  color: var(--white);
+  pointer-events: none;
+  margin: 0 0 10px 0;
+}
+
+section.form-container form .field input {
+  width: 100%;
+  height: 60px;
+  padding: 0 18px;
+  font-size: var(--f2);
+  font-weight: var(--light);
+  color: var(--black);
+  background-color: var(--white);
+  border-radius: 18px;
+  border: none;
+  outline: none;
+}
+
+section.form-container form .field svg.icon-eye {
+  position: absolute;
+  top: 45px;
+  right: 20px;
+  width: 20px;
+  height: 20px;
+  fill: var(--grey-soft);
+  cursor: pointer;
+}
+
+section.form-container form .field svg.icon-eye.active {
+  fill: var(--black);
+}
+
+section.form-container form button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 400px;
+  height: 50px;
+  margin-top: 20px;
+  background-color: var(--green);
+  color: var(--white);
+  font-size: var(--f2);
+  font-weight: var(--bold);
+  border-radius: 18px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+section.form-container form button:hover {
+  background-color: color-mix(in srgb, var(--green) 65%, var(--white) 35%);
+}
+
+section.form-container form button.loading {
+  background-color: color-mix(in srgb, var(--green) 65%, var(--white) 35%);
+  color: color-mix(in srgb, var(--blue-dark) 65%, var(--white) 35%);
+  pointer-events: none;
+}
+
+section.form-container form button.loading span {
+  opacity: 1;
+  visibility: visible;
+}
+
+section.form-container form button span {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 3px solid var(--white);
+  border-top: 3px solid transparent;
+  border-radius: 50%;
+  opacity: 0;
+  visibility: hidden;
+  animation: 1s spin infinite linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
