@@ -1,0 +1,305 @@
+section.list {
+  position: relative;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 60px);
+  padding: 30px 80px 30px 80px;
+  overflow-y: auto;
+}
+
+section.list .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+section.list .header .search-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+section.list .header .search-wrapper h3 {
+  font-size: var(--f2);
+  font-weight: var(--light);
+  color: var(--black);
+}
+
+section.list .header .search-wrapper .search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section.list .header .search-wrapper .search .field {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+section.list .header .search-wrapper .search .field input {
+  padding: 10px 40px;
+  height: 40px;
+  font-size: var(--f2);
+  font-weight: var(--light);
+  color: var(--black);
+  background-color: var(--white);
+  border-radius: 10px;
+  border: 1px solid var(--grey-light);
+  outline: none;
+}
+
+section.list .header .search-wrapper .search .field .icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 100%;
+  pointer-events: none;
+}
+
+
+section.list svg {
+  width: 15px;
+  height: 15px;
+  fill: var(--black);
+}
+
+section.list .header .buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+section.list .header .buttons .btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  padding: 10px 20px;
+  background-color: var(--green);
+  color: var(--white);
+  font-size: var(--f2);
+  font-weight: var(--bold);
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: all 0.3s;
+}
+
+section.list .header .buttons .btn:hover {
+  opacity: 0.8;
+}
+
+section.list .header .buttons .btn svg {
+  fill: var(--white);
+}
+
+section.list .header .buttons .btn.primary {
+  background-color: transparent;
+  border: 1px solid var(--grey-soft);
+  color: var(--black);
+}
+
+section.list .header .buttons .btn svg {
+  margin: 0 10px 0 0;
+}
+
+section.list table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-bottom: 20px;
+}
+
+section.list table thead tr th {
+  background-color: var(--grey-lighter);
+}
+
+section.list table tr th,
+section.list table tr td {
+  text-align: left;
+  padding: 14px 14px;
+  font-size: var(--f2);
+  font-weight: var(--light);
+  color: var(--black);
+}
+
+section.list table thead tr th:first-child {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+section.list table thead tr th:last-child {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+section.list table tbody tr td {
+  border-bottom: 1px solid var(--grey-soft);
+  vertical-align: middle;
+}
+
+section.list table tbody tr td .photo {
+  width: 32px;
+  height: 32px;
+  border-radius: 50px;
+  background-color: var(--purple-dark);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--f1);
+  font-weight: var(--light);
+  color: var(--violet);
+  margin-right: 10px;
+}
+
+section.list table tbody tr td .status {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: var(--f1);
+  font-weight: var(--light);
+  text-align: center;
+  width: fit-content;
+}
+
+section.list table tbody tr td .status.active {
+  background-color: var(--green-dark);
+  color: var(--green-bright);
+}
+
+section.list table tbody tr td .status.inactive {
+  background-color: var(--red-dark);
+  color: var(--red-bright);
+}
+
+section.list table tbody tr td svg {
+  cursor: pointer;
+}
+
+section.list .pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section.list .pagination button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: none;
+  margin: 0 10px 0 0;
+  border-radius: 10px;
+  background-color: var(--grey-lighter);
+  color: var(--black);
+  font-weight: var(--bold);
+  font-size: var(--f2);
+  cursor: pointer;
+}
+
+section.list .pagination button.active {
+  background-color: var(--green);
+  color: var(--white);
+}
+
+
+section.list .header .buttons .filter {
+  position: relative;
+}
+
+section.list .header .buttons .filter .options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 170px;
+  margin: 10px 0 0 0;
+  padding: 5px 0;
+  background-color: var(--white);
+  border: 1px solid var(--grey-light);
+  border-radius: 13px;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease;
+}
+
+section.list .header .buttons .filter .options.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+section.list .options .list {
+  max-height: 200px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+}
+
+section.list .options .list .item {
+  padding: 12px 18px;
+  font-size: var(--f2);
+  font-weight: var(--regular);
+  color: var(--grey-medium);
+  cursor: pointer;
+}
+
+section.list .options .list .item:hover {
+  color: var(--green-light);
+}
+
+section.list table td:last-child {
+  display: flex;
+  justify-content: flex-end;
+}
+
+section.list table tbody tr td .actions {
+  position: relative;
+}
+
+section.list table tbody tr td .actions .options {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  min-width: 140px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 10;
+  opacity: 1;
+  visibility: hidden;
+
+}
+
+section.list table tbody tr td .actions .options.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+section.list table tbody tr td .actions .options a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  color: #333;
+  text-decoration: none;
+}
+
+section.list table tbody tr td .actions .options a:hover {
+  background-color: #f0f0f0;
+}

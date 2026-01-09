@@ -1,0 +1,68 @@
+section.success {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: calc(100vh - 70px);
+  padding: 0 0 60px;
+  background-color: var(--grey-lighter);
+  overflow-y: auto;
+}
+
+section.success .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 500px;
+  padding: 30px;
+  background-color: var(--white);
+  border: 1px solid var(--grey-light);
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+section.success .card h2 {
+  color: var(--black);
+  font-weight: var(--bold);
+  font-size: var(--f4);
+  color: var(--green-dark);
+  margin: 0 0 20px 0;
+}
+section.success .card svg {
+  width: 80px;
+  height: 80px;
+  fill: var(--green-dark);
+  margin: 0 0 20px 0;
+}
+
+section.success .card button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  padding: 10px 20px;
+  background-color: var(--green);
+  color: var(--white);
+  font-size: var(--f2);
+  font-weight: var(--bold);
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  box-sizing: border-box;
+  transition: all 0.3s;
+}
+
+section.success .card button:hover {
+  background-color: var(--green-light);
+}
+
+section.success .card button svg {
+  width: 15px;
+  height: 15px;
+  fill: var(--white);
+  margin: 0 10px 0 0;
+}
