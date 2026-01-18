@@ -1,0 +1,222 @@
+section.update {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: calc(100vh - 70px);
+  padding: 30px;
+  overflow-y: auto;
+}
+
+section.update form {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+}
+
+section.update form .fields {
+  display: flex;
+  margin: 0 0 15px 0;
+}
+
+section.update form .fields.first-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section.update form .fields .upload {
+  width: 130px;
+  height: 130px;
+  position: relative;
+}
+
+section.update form .fields .upload input[type='file'] {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 3;
+}
+
+section.update form .fields .upload .photo {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+section.update form .fields .upload .photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+}
+
+section.update form .fields .upload .photo .icon {
+  position: absolute;
+  left: 95px;
+  top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  background: var(--grey-light);
+  border-radius: 50px;
+  color: var(--black);
+  z-index: 2;
+  pointer-events: none;
+}
+
+section.update form .fields .upload .photo .icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+section.update form .fields .field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin: 0 20px 0 0;
+}
+
+section.update form .fields .field:last-child {
+  margin: 0;
+}
+
+section.update form .fields .field label {
+  margin: 0 0 15px 0;
+  font-size: var(--f1);
+  font-weight: var(--bold);
+  color: var(--black);
+}
+
+section.update form .fields .field input {
+  width: 100%;
+  height: 60px;
+  padding: 0 18px;
+  font-size: var(--f2);
+  font-weight: var(--light);
+  color: var(--black);
+  background-color: var(--white);
+  border-radius: 18px;
+  border: 1px solid var(--grey-light);
+  outline: none;
+  box-sizing: border-box;
+}
+
+section.update form .fields .field input::placeholder {
+  color: var(--grey-medium);
+}
+
+section.update form .fields .field.field-name input {
+  font-size: var(--f3);
+  border: none;
+}
+
+section.update form .fields .field svg.icon-eye {
+  position: absolute;
+  top: 300px;
+  right: 20px;
+  width: 20px;
+  height: 20px;
+  fill: var(--grey-soft);
+  cursor: pointer;
+}
+
+section.update form .fields .field svg.icon-eye.active {
+  fill: var(--black);
+}
+
+section.update form .buttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 15px 0 0 0;
+}
+
+section.update form .buttons .btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  padding: 10px 20px;
+  margin: 0 10px 0 0;
+  background-color: var(--green);
+  color: var(--white);
+  font-size: var(--f2);
+  font-weight: var(--bold);
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  box-sizing: border-box;
+  transition: all 0.3s;
+}
+
+section.update form .buttons .btn:hover {
+  background-color: var(--green-light);
+}
+
+section.update form .buttons .btn.primary:hover {
+  opacity: 0.8;
+}
+
+section.update form .buttons .btn.primary {
+  background-color: transparent;
+  border: 1px solid var(--grey-soft);
+  color: var(--black);
+}
+
+section.update form .buttons .btn svg {
+  width: 15px;
+  height: 15px;
+  margin: 0 10px 0 0;
+  fill: var(--white);
+}
+
+section.update form .buttons .btn.primary svg {
+  fill: var(--black);
+}
+
+section.update form .buttons .btn.loading {
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+section.update form .buttons .btn.loading span {
+  opacity: 1;
+  visibility: visible;
+}
+
+section.update form .buttons .btn.loading p,
+section.update form .buttons .btn.loading svg {
+  opacity: 0;
+  visibility: hidden;
+}
+
+section.update form .buttons .btn span {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 3px solid var(--white);
+  border-top: 3px solid transparent;
+  border-radius: 50%;
+  opacity: 0;
+  visibility: hidden;
+  animation: 1s spin infinite linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
