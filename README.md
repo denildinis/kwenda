@@ -4,7 +4,7 @@ Kwenda é uma plataforma inovadora angolana que simplifica o processo de marcaç
 
 ---
 
-## 📌 Sobre o Projeto
+## 📌 Sobre o Projecto
 
 Kwenda foi criado para resolver os desafios enfrentados pelos clientes bancários em Angola, onde filas longas e esperas prolongadas são comuns. A plataforma permite que os usuários agendem seus atendimentos com antecedência, de forma simples, rápida e segura.
 
