@@ -89,7 +89,7 @@ Chrome, Edge ou Firefox.
 ## 📬 Contato
 Fique à vontade para entrar em contato:
 
-- 📧 Email: denildinis1@gmail.com
+- 📧 Email: [denildinis1@gmail.com](mailto:denildinis1@gmail.com)
 - 🔗 LinkedIn: [https://www.linkedin.com/in/denil-dinis-b74937352/](https://www.linkedin.com/in/denil-dinis-b74937352/)
 
 ---
